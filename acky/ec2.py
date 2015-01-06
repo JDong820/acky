@@ -313,7 +313,7 @@ class InstanceCollection(AwsCollection, EC2ApiClient):
         for status in statuses:
             if status.get("Events"):
                 for event in status.get("Events"):
-                    event[u"InstanceId"] = status.get('InstanceId')
+                    event['InstanceId'] = status.get('InstanceId')
                     event_list.append(event)
         return event_list
 
